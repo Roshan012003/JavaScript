@@ -6,7 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <script></script>
-    
+    <p id="demo"></p>
+    <script language = "javascript" type = "text/javascript">
+    var feedback = "   I loved the FOOD and the service!   ";
+    feedback=feedback.trim();
+    feedback=feedback.toLowerCase();
+    feedback=feedback.replace(/food/i,"ambience");
+    var pos = feedback.indexOf("service");
+    var wordArray =feedback.split(" ");
+    var wordsList = "";
+    for (var i=0;i<wordArray.length;i++){
+        wordsList+=wordArray[i]+"<br>"
+    }
+    document.getElementById("demo").innerHTML=
+    "Processed feedback:"+feedback+"<br>"+
+    "Postition of service:"+pos+"<br>"+
+    wordsList;
+</script>
 </body>
 </html>
