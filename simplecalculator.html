@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>My Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+   
+let item1Name = "Rice";
+let item1Price = 50;  
+let item1Quantity = 2; 
+
+let item2Name = "Sugar";
+let item2Price = 40;  
+let item2Quantity = 3;
+
+let item3Name = "Wheat";
+let item3Price = 30;  
+let item3Quantity = 5;
+
+
+let item1Cost = item1Price * item1Quantity;
+let item2Cost = item2Price * item2Quantity;
+let item3Cost = item3Price * item3Quantity;
+
+let totalBill = item1Cost + item2Cost + item3Cost;
+
+
+console.log(item1Name + " cost: ₹" + item1Cost);
+console.log(item2Name + " cost: ₹" + item2Cost);
+console.log(item3Name + " cost: ₹" + item3Cost);
+console.log("Total Bill: ₹" + totalBill);
+
+
+item2Quantity = 5;
+item2Cost = item2Price * item2Quantity;
+totalBill = item1Cost + item2Cost + item3Cost;
+
+
+console.log("Updated " + item2Name + " cost: ₹" + item2Cost);
+console.log("Updated Total Bill: ₹" + totalBill);
+</script>
+</body>
+</html>
