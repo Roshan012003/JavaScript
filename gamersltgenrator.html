@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Statistics Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script language="JavaScript" type="text/javascript">
+        
+let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+
+
+let userScoreStr = "45";
+let userScore = Number(userScoreStr);
+
+
+let difference = Math.abs(mysteryLevel - userScore);
+
+
+let sqrtScore = Math.sqrt(userScore);
+
+
+let piValue = Math.PI;
+
+let implicitConversion = "20" * 5;
+
+
+let highest = Math.max(10, 20, mysteryLevel);
+let lowest = Math.min(10, 20, mysteryLevel);
+
+
+console.log("Mystery Level:", mysteryLevel);
+console.log("User Score:", userScore);
+console.log("Absolute Difference:", difference);
+console.log("Square Root of User Score:", sqrtScore);
+console.log("Value of Pi:", piValue);
+console.log("Implicit Conversion ('20' * 5):", implicitConversion);
+console.log("Highest among 10, 20, mysteryLevel:", highest);
+console.log("Lowest among 10, 20, mysteryLevel:", lowest);
+
+    </script>
+</body>
+</html>
