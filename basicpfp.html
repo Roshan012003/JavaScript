@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile Page</title>
+</head>
+<body>
+  <h2>User Profile</h2>
+  <p id="result"></p>
+  <button onclick="checkAccess()">Check Access</button>
+
+  <script>
+    
+    let user = {
+      name: "Roshan",
+      age: 20,
+      isAdmin: true
+    };
+
+    function checkAccess() {
+      let output = "";
+
+      if ("age" in user) {
+        output += "Age property exists: " + user.age + "<br>";
+      } else {
+        output += "Age property does not exist<br>";
+      }
+
+  
+      let access = (user.isAdmin && user.age >= 18) ? "Access Granted" : "Access Denied";
+      output += access + "<br>";
+
+     
+      delete user.age;
+      output += "Age property deleted.";
+
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</body>
+</html>
