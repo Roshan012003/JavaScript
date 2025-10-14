@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <form id="textForm">
+    <input type="text" id="textInput" placeholder="Type something...">
+    <button type="submit">Submit</button>
+    <p id="displayText"></p>
+  </form>
+
+  <script>
+    
+    let form = document.getElementById("textForm");
+    let input = document.getElementById("textInput");
+    let paragraph = document.getElementById("displayText");
+
+    
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      let text = input.value.trim(); 
+
+      if (text) {
+        paragraph.textContent = text;
+        paragraph.style.color = "blue";
+      }
+
+      input.value = ""; 
+    });
+
+    
+    paragraph.addEventListener("mouseover", function() {
+      paragraph.style.color = "green";
+    });
+
+    
+    paragraph.addEventListener("mouseout", function() {
+      paragraph.style.color = "blue";
+    });
+  </script>
+</body>
+</html>
